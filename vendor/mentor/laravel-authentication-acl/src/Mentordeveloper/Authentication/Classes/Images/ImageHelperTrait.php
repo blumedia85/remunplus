@@ -7,7 +7,7 @@ use Mentordeveloper\Library\Exceptions\NotFoundException;
 /**
  * Trait ImageHelperTrait
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 trait ImageHelperTrait {
 

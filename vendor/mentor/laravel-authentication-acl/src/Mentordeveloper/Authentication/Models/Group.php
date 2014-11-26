@@ -2,7 +2,7 @@
 /**
  * Class Group
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Cartalyst\Sentry\Groups\Eloquent\Group as SentryGroup;
 use Mentordeveloper\Library\Traits\OverrideConnectionTrait;

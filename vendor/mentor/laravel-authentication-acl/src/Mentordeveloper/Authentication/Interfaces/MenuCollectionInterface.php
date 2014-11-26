@@ -2,7 +2,7 @@
 /**
  * Interface MenuCollectionInterface
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 interface MenuCollectionInterface
 {

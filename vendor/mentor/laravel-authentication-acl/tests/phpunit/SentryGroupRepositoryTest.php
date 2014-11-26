@@ -3,7 +3,7 @@
 /**
  * Test GroupRepositoryTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Repository\SentryGroupRepository;
 use Mockery as m;

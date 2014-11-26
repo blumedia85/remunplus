@@ -6,7 +6,7 @@ use Mentordeveloper\Authentication\Validators\UserSignupValidator;
 /**
  * Test UserSignupValidatorTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserSignupValidatorTest extends TestCase {
 

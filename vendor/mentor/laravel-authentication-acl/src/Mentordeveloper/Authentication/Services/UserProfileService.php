@@ -3,7 +3,7 @@
 /**
  * Class UserProfileService
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use App;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

@@ -13,7 +13,7 @@ use Mentordeveloper\Library\Repository\Interfaces\BaseRepositoryInterface;
 /**
  * Class EloquentUserProfileRepository
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class EloquentUserProfileRepository extends EloquentBaseRepository implements UserProfileRepositoryInterface
 {

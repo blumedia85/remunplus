@@ -6,7 +6,7 @@ use App;
 /**
  * Class DbSeeder
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class DbSeeder extends Seeder
 {

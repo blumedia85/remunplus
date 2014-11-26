@@ -5,7 +5,7 @@ use Mentordeveloper\Authentication\Presenters\UserProfilePresenter;
 /**
  * Class UserProfile
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 
 class UserProfile extends BaseModel

@@ -3,7 +3,7 @@ use App;
 /**
  * Trait ConnectionTrait
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 trait ConnectionTrait {
   public function getConnectionName()

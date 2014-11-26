@@ -15,7 +15,7 @@ use Mentordeveloper\Authentication\Interfaces\AuthenticatorInterface;
  * Service to send email and error handling
  *
  * @package Auth
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class ReminderService {
 

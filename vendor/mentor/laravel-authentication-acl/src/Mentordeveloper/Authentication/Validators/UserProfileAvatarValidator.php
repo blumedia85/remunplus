@@ -5,7 +5,7 @@ use Mentordeveloper\Library\Validators\AbstractValidator;
 /**
  * Class UserProfileAvatarValidator
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserProfileAvatarValidator extends AbstractValidator
 {

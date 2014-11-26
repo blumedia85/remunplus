@@ -3,7 +3,7 @@
 /**
  * Test SentryAuthenticationHelperTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Models\User;
 use Mockery as m;

@@ -9,7 +9,7 @@ use Mentordeveloper\Authentication\Models\ProfileFieldType;
 /**
  * Class CustomProfileRepository
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class CustomProfileRepository
 {

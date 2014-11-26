@@ -3,7 +3,7 @@
 /**
  * Test UserSignupEmailValidatorTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use App, Input, Session, Config, Event;
 use Mentordeveloper\Authentication\Tests\Unit\Traits\Helper;

@@ -2,7 +2,7 @@
 /**
  * Class UserStatistics
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use App;
 class UserStatistics

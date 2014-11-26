@@ -5,7 +5,7 @@ use Mentordeveloper\Library\Traits\ConnectionTrait;
 /**
  * Test ConnectionTraitTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class ConnectionTraitTest extends TestCase {
 

@@ -1723,8 +1723,8 @@
         "authors": [
             {
                 "name": "mentor",
-                "email": "mentor@mentorbeschi.com",
-                "homepage": "http://www.mentorbeschi.com"
+                "email": "mentordeveloper@gmail.com",
+                "homepage": "http://www.mentordeveloper.com"
             }
         ],
         "description": "General laravel library package"
@@ -1993,8 +1993,8 @@
         "authors": [
             {
                 "name": "mentor",
-                "email": "mentor@mentorbeschi.com",
-                "homepage": "http://www.mentorbeschi.com"
+                "email": "mentordeveloper@gmail.com",
+                "homepage": "http://www.mentordeveloper.com"
             }
         ],
         "description": "Laravel authentication and ACL package with a cool admin panel",

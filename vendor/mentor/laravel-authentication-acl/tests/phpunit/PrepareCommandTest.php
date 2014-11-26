@@ -7,7 +7,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 /**
  * Test AuthenticatorInstallCommandTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class PrepareCommandTest extends TestCase {
 

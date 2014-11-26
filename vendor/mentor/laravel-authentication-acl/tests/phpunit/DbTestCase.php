@@ -3,7 +3,7 @@
 /**
  * Class DbTestCase
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Artisan, DB, Closure, App, Config;
 use BadMethodCallException;

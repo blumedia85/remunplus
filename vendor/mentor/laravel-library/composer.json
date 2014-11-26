@@ -4,9 +4,9 @@
     "license" : "MIT",
     "authors": [
         {
-            "name": "mentor",
-            "email": "mentor@mentorbeschi.com",
-            "homepage": "http://www.mentorbeschi.com"
+            "name": "Mentordeveloper",
+            "email": "mentordeveloper@gmail.com",
+            "homepage": "http://www.mentordeveloper.com"
         }
     ],
     "require": {
@@ -17,12 +17,6 @@
         "mockery/mockery": "0.9.0",
         "orchestra/testbench": "2.2.*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git://github.com/orchestral/phpseclib.git"
-        }
-    ],
     "autoload": {
         "psr-0": {
             "Mentordeveloper\\Library\\": "src/"

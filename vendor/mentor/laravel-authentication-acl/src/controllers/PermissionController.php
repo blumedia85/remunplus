@@ -2,7 +2,7 @@
 /**
  * Class PermissionController
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Library\Form\FormModel;
 use Mentordeveloper\Authentication\Models\Permission;

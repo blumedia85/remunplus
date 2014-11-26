@@ -2,7 +2,7 @@
 /**
  * Class User
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Cartalyst\Sentry\Users\Eloquent\User as CartaUser;
 use Mentordeveloper\Library\Traits\OverrideConnectionTrait;

@@ -2,7 +2,7 @@
 /**
  * Class MenuItem
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Helpers\SentryAuthenticationHelper;
 use Mentordeveloper\Authentication\Interfaces\MenuInterface;

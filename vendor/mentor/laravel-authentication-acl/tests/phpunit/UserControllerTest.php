@@ -15,7 +15,7 @@ use Mockery as m;
 /**
  * Test UserControllerTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserControllerTest extends DbTestCase
 {

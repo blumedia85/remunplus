@@ -3,7 +3,7 @@
 /**
  * Test MenuItemCollectionTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Classes\Menu\MenuItemCollection;
 use Mockery as m;

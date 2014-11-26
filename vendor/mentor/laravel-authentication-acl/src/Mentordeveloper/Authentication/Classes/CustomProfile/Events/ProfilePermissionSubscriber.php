@@ -5,7 +5,7 @@ use Mentordeveloper\Authentication\Exceptions\PermissionException;
 /**
  * Class ProfilePermissionSubscriber
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class ProfilePermissionSubscriber 
 {

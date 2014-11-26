@@ -3,7 +3,7 @@
 /**
  * Swift mailer implementation of MailerInterface
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mail;
 use Log;

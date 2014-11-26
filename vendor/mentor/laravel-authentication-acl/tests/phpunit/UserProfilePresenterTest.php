@@ -7,7 +7,7 @@ use Mentordeveloper\Authentication\Tests\Unit\Traits\UserFactory;
 /**
  * Test UserProfilePresenterTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserProfilePresenterTest extends DbTestCase
 {

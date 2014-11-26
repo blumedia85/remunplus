@@ -2,7 +2,7 @@
 /**
  * Class UserSignupEmailValidator
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\MessageBag;

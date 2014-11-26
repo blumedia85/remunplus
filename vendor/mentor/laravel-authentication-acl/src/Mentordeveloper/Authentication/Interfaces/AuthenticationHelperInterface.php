@@ -2,7 +2,7 @@
 /**
  * Interface AuthenticationHelperInterface
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 interface AuthenticationHelperInterface 
 {

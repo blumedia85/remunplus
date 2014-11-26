@@ -2,7 +2,7 @@
 /**
  * Class FileRouteHelper
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Config, Route, App;
 use Mentordeveloper\Authentication\Interfaces\AuthenticationRoutesInterface;

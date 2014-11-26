@@ -2,7 +2,7 @@
 /**
  * Class GroupRepository
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Mentordeveloper\Library\Repository\Interfaces\BaseRepositoryInterface;

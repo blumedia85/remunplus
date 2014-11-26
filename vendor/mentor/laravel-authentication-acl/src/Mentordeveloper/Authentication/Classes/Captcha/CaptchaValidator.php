@@ -2,7 +2,7 @@
 /**
  * Class CaptchaValidator
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 abstract class CaptchaValidator implements CaptchaValidatorInterface
 {

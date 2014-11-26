@@ -8,7 +8,7 @@ use Mentordeveloper\Authentication\Seeds\DbSeeder;
 /**
  * Test UserSeederTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class DbSeederTest extends DbTestCase
 {

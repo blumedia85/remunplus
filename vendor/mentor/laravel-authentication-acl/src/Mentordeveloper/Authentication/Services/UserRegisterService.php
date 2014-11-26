@@ -15,7 +15,7 @@ use Mentordeveloper\Library\Exceptions\ValidationException;
 /**
  * Class UserRegisterService
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserRegisterService
 {

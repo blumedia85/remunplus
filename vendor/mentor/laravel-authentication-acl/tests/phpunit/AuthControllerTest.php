@@ -12,7 +12,7 @@ use App;
 /**
  * Test AuthControllerTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class AuthControllerTest extends DbTestCase
 {

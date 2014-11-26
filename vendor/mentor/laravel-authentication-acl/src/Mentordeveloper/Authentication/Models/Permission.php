@@ -2,7 +2,7 @@
 /**
  * Class Permission
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 
 class Permission extends BaseModel

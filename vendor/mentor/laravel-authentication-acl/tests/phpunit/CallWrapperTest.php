@@ -2,7 +2,7 @@
 /**
  * Test ArtisanWrapperTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mockery as m;
 class CallWrapperTest extends PHPUnit_Framework_TestCase {

@@ -3,7 +3,7 @@
 /**
  * Test EditableSubscriberTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Events\EditableSubscriber;
 

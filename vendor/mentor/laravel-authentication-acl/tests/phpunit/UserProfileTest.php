@@ -5,7 +5,7 @@ use Mentordeveloper\Authentication\Models\UserProfile;
 /**
  * Test UserProfileTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserProfileTest extends DbTestCase
 {

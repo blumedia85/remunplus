@@ -11,7 +11,7 @@ use App;
 /**
  * Test UserProfileServiceTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserProfileServiceTest extends DbTestCase
 {

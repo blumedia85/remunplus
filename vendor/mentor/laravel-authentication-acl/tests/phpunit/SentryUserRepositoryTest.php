@@ -8,7 +8,7 @@ use Cartalyst\Sentry\Users\UserExistsException;
 /**
  * Test SentryUserRepositoryTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class SentryUserRepositoryTest extends DbTestCase
 {

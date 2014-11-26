@@ -4,7 +4,7 @@
  * Class SentryAuthenticator
  * Sentry authenticate implementatione
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Illuminate\Support\MessageBag;
 use Mentordeveloper\Authentication\Exceptions\AuthenticationErrorException;

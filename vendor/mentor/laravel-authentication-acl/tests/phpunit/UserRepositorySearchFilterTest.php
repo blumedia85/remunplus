@@ -11,7 +11,7 @@ use Mockery as m;
 /**
  * Test UserRepositorySearchFilterTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class UserRepositorySearchFilterTest extends DbTestCase
 {

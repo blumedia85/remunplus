@@ -3,7 +3,7 @@
 /**
  * Class FormHelper
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Repository\EloquentPermissionRepository as PermissionRepository;
 use Mentordeveloper\Authentication\Repository\SentryGroupRepository;

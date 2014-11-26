@@ -2,7 +2,7 @@
 /**
  * Class UserPresenter
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Presenters\Traits\PermissionTrait;
 use Mentordeveloper\Library\Presenters\AbstractPresenter;

@@ -9,7 +9,7 @@ use Mentordeveloper\Authentication\Tests\Unit\Traits\UserFactory;
 /**
  * Test CustomProfileTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class CustomProfileRepositoryTest extends DbTestCase {
     use UserFactory;

@@ -3,7 +3,7 @@
 /**
  * Class UserController
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Illuminate\Support\MessageBag;
 use Mentordeveloper\Authentication\Exceptions\PermissionException;

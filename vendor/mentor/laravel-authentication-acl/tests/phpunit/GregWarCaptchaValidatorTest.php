@@ -6,7 +6,7 @@ use Mentordeveloper\Authentication\Classes\Captcha\GregWarCaptchaValidator;
 /**
  * Test GregWarCaptchaValidatorTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class GregWarCaptchaValidatorTest extends TestCase {
 

@@ -3,7 +3,7 @@
 /**
  * Test GroupPresenterTest
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Authentication\Presenters\GroupPresenter;
 use Mockery as m;

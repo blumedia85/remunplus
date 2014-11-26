@@ -4,7 +4,7 @@
  *
  * Class to save form data associated to a model
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use Mentordeveloper\Library\Validators\ValidatorInterface;
 use Mentordeveloper\Library\Exceptions\ValidationException;

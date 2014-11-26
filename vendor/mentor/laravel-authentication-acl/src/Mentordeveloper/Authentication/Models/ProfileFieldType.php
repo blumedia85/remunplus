@@ -3,7 +3,7 @@
 /**
  * Class ProfileTypeField
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 class ProfileFieldType extends BaseModel
 {

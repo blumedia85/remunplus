@@ -4,7 +4,7 @@ namespace Mentordeveloper\Authentication\Repository;
 /**
  * Class UserRepository
  *
- * @author mentor beschi mentor@mentorbeschi.com
+ * @author mentor beschi mentordeveloper@gmail.com
  */
 use App;
 use Cartalyst\Sentry\Users\UserExistsException as CartaUserExists;
