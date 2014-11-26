@@ -7,9 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
-    'Jacopo\\Library\\Tests\\' => array($vendorDir . '/jacopo/laravel-library/tests'),
-    'Jacopo\\Authentication\\Tests\\Unit\\' => array($vendorDir . '/jacopo/laravel-authentication-acl/tests/phpunit'),
-    'Jacopo\\Authentication\\Codeception\\' => array($vendorDir . '/jacopo/laravel-authentication-acl/tests'),
-    'Jacopo\\Authentication\\' => array($vendorDir . '/jacopo/laravel-authentication-acl/src/Jacopo/Authentication'),
+    'Mentordeveloper\\Library\\Tests\\' => array($vendorDir . '/mentor/laravel-library/tests'),
+    'Mentordeveloper\\Authentication\\Tests\\Unit\\' => array($vendorDir . '/mentor/laravel-authentication-acl/tests/phpunit'),
+    'Mentordeveloper\\Authentication\\Codeception\\' => array($vendorDir . '/mentor/laravel-authentication-acl/tests'),
+    'Mentordeveloper\\Authentication\\' => array($vendorDir . '/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication'),
     'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
 );

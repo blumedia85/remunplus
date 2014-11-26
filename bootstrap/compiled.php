@@ -476,7 +476,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     }
     public static function getBootstrapFile()
     {
-        return 'E:\\New folder\\htdocs\\payrol_tax_system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation' . '/start.php';
+        return 'E:\\New folder\\htdocs\\payroll_erp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation' . '/start.php';
     }
     public function startExceptionHandling()
     {

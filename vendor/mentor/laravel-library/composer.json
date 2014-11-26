@@ -1,0 +1,35 @@
+{
+    "name": "mentor/laravel-library",
+    "description": "General laravel library package",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "mentor",
+            "email": "mentor@mentorbeschi.com",
+            "homepage": "http://www.mentorbeschi.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.0",
+        "orchestra/testbench": "2.2.*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Mentordeveloper\\Library\\": "src/"
+        },
+        "psr-4": {
+            "Mentordeveloper\\Library\\Tests\\" : "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}

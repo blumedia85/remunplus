@@ -1683,7 +1683,7 @@
         ]
     },
     {
-        "name": "jacopo/laravel-library",
+        "name": "mentor/laravel-library",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
         "source": {
@@ -1710,10 +1710,10 @@
         "installation-source": "dist",
         "autoload": {
             "psr-0": {
-                "Jacopo\\Library\\": "src/"
+                "Mentordeveloper\\Library\\": "src/"
             },
             "psr-4": {
-                "Jacopo\\Library\\Tests\\": "tests/"
+                "Mentordeveloper\\Library\\Tests\\": "tests/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -1722,9 +1722,9 @@
         ],
         "authors": [
             {
-                "name": "jacopo",
-                "email": "jacopo@jacopobeschi.com",
-                "homepage": "http://www.jacopobeschi.com"
+                "name": "mentor",
+                "email": "mentor@mentorbeschi.com",
+                "homepage": "http://www.mentorbeschi.com"
             }
         ],
         "description": "General laravel library package"
@@ -1941,7 +1941,7 @@
         ]
     },
     {
-        "name": "jacopo/laravel-authentication-acl",
+        "name": "mentor/laravel-authentication-acl",
         "version": "1.2.6",
         "version_normalized": "1.2.6.0",
         "source": {
@@ -1960,7 +1960,7 @@
             "gregwar/captcha": "1.0.11",
             "illuminate/support": "4.2.*",
             "intervention/image": "2.*",
-            "jacopo/laravel-library": "1.2.*",
+            "mentor/laravel-library": "1.2.*",
             "php": ">=5.4.0"
         },
         "require-dev": {
@@ -1976,9 +1976,9 @@
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Jacopo\\Authentication\\": "src/Jacopo/Authentication",
-                "Jacopo\\Authentication\\Tests\\Unit\\": "tests/phpunit",
-                "Jacopo\\Authentication\\Codeception\\": "tests/"
+                "Mentordeveloper\\Authentication\\": "src/Mentordeveloper/Authentication",
+                "Mentordeveloper\\Authentication\\Tests\\Unit\\": "tests/phpunit",
+                "Mentordeveloper\\Authentication\\Codeception\\": "tests/"
             },
             "classmap": [
                 "src/controllers",
@@ -1992,9 +1992,9 @@
         ],
         "authors": [
             {
-                "name": "jacopo",
-                "email": "jacopo@jacopobeschi.com",
-                "homepage": "http://www.jacopobeschi.com"
+                "name": "mentor",
+                "email": "mentor@mentorbeschi.com",
+                "homepage": "http://www.mentorbeschi.com"
             }
         ],
         "description": "Laravel authentication and ACL package with a cool admin panel",

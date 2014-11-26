@@ -10,6 +10,6 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', "Jacopo\\Authentication\\Controllers\\AuthController@getClientLogin");
-Route::get('/payadmin', "Jacopo\\Authentication\\Controllers\\AuthController@getAdminLogin");
-Route::get('/company', "Jacopo\Authentication\Controllers\DashboardController@base");
+Route::get('/', "Mentordeveloper\\Authentication\\Controllers\\AuthController@getClientLogin");
+Route::get('/payadmin', "Mentordeveloper\\Authentication\\Controllers\\AuthController@getAdminLogin");
+Route::get('/company', "Mentordeveloper\Authentication\Controllers\DashboardController@base");

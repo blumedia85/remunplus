@@ -538,6 +538,17 @@ class Sentry {
 	{
 		return $this->groupProvider->findByName($name);
 	}
+	/**
+	 * Find the group by name.
+	 *
+	 * @param  string  $name
+	 * @return \Cartalyst\Sentry\Groups\GroupInterface  $group
+	 * @throws \Cartalyst\Sentry\Groups\GroupNotFoundException
+	 */
+	public function findFromClientID($clientID)
+	{
+		return $this->groupProvider->findByName($clientID);
+	}
 
 	/**
 	 * Returns all groups.

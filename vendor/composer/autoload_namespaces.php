@@ -32,7 +32,7 @@ return array(
     'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
-    'Jacopo\\Library\\' => array($vendorDir . '/jacopo/laravel-library/src'),
+    'Mentordeveloper\\Library\\' => array($vendorDir . '/mentor/laravel-library/src'),
     'Illuminate' => array($vendorDir . '/laravel/framework/src'),
     'Gregwar\\Captcha' => array($vendorDir . '/gregwar/captcha'),
     'File' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),

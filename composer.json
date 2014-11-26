@@ -6,7 +6,6 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"jacopo/laravel-authentication-acl": "1.2.*",
 		"way/generators": "~3.0"
 	},
 	"autoload": {
