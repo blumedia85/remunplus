@@ -736,7 +736,7 @@ class Sentry {
 	 */
 	public function createCompany(array $credentials)
 	{
-		return $this->companyProvider->create($credentials);
+            return $this->companyProvider->create($credentials);
 	}
 
 	/**

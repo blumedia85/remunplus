@@ -9,12 +9,16 @@ namespace Mentordeveloper\Authentication\Repository;
 use App;
 use Cartalyst\Sentry\Users\UserExistsException as CartaUserExists;
 use Cartalyst\Sentry\Users\UserNotFoundException;
+use Cartalyst\Sentry\Company\CompanyExistsException as CartaCompanyExists;
+use Cartalyst\Sentry\Company\CompanyNotFoundException;
 use DateTime;
 use Event;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Config;
 use Mentordeveloper\Authentication\Exceptions\UserExistsException;
 use Mentordeveloper\Authentication\Exceptions\UserNotFoundException as NotFoundException;
+use Mentordeveloper\Authentication\Exceptions\CompanyExistsException;
+//use Mentordeveloper\Authentication\Exceptions\CompanyNotFoundException;
 use Mentordeveloper\Authentication\Models\Group;
 use Mentordeveloper\Authentication\Models\User;
 use Mentordeveloper\Authentication\Models\Company;
@@ -45,12 +49,12 @@ class SentryCompanyRepository extends EloquentBaseRepository implements CompanyR
      */
     public function create(array $input)
     {
-        $data = array(
+       $data = array(
                 "username"     => $input["email"],
                 "pass"  => $input["password"],
-                "company_name"  => $input["c_name"],
-                "emp_name"  => $input["emp_name"],
-                "emp_number"  => $input["emp_number"],
+                "company_name"  => $input["company_name"],
+                "emp_name"  => $input["employer_name"],
+                "emp_number"  => $input["employer_number"],
                 "address"  => $input["address"],
                 "contact_number"  => $input["contact_number"],
                 "parish"  => $input["parish"],
@@ -61,12 +65,11 @@ class SentryCompanyRepository extends EloquentBaseRepository implements CompanyR
 
         try
         {
-            $client = $this->sentry->createUser($data);
-        } catch(CartaUserExists $e)
+            $client = $this->sentry->createCompany($data);
+        } catch(CartaCompanyExists $e)
         {
             throw new CompanyExistsException;
         }
-
         return $client;
     }
 
@@ -146,8 +149,7 @@ class SentryCompanyRepository extends EloquentBaseRepository implements CompanyR
             throw new NotFoundException;
         }
     }
-
-    /**
+  /**
      * Activates a user
      *
      * @param string login_name

@@ -108,8 +108,8 @@ Admin area: edit client
                     <span class="text-danger">{{$errors->first('end_date')}}</span>
                     
                     <div class="form-group">
-                        {{Form::label("activated","Client active: ")}}
-                        {{Form::select('activated', ["1" => "Yes", "0" => "No"], (isset($user->activated) && $user->activated) ? $user->activated : "0", ["class"=> "form-control"] )}}
+                        {{Form::label("is_active","Client active: ")}}
+                        {{Form::select('is_active', ["1" => "Yes", "0" => "No"], (isset($user->is_active) && $user->is_active) ? $user->is_active : "0", ["class"=> "form-control"] )}}
                     </div>
 <!--                    <div class="form-group">
 {{--                        {{Form::label("banned","Banned: ")}}

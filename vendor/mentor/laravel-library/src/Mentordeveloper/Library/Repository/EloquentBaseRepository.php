@@ -75,6 +75,7 @@ class EloquentBaseRepository implements BaseRepositoryInterface
         }
         catch(ModelNotFoundException $e)
         {
+            echo $e->getMessage();exit;
             throw new NotFoundException;
         }
 

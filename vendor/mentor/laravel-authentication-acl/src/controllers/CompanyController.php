@@ -62,20 +62,22 @@ class CompanyController extends Controller {
         $this->custom_profile_repository = App::make('custom_profile_repository');
     }
     public function getList(){
-        $companys = $this->company_repository->all(Input::except(['page']));
+        $companies = $this->company_repository->all(Input::except(['page']));
 
-        return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companys]);
+        return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
     }
     public function editCompany(){
         try
         {
             $user = $this->company_repository->find(Input::get('id'));
+            
         } catch(MentordeveloperExceptionsInterface $e)
         {
+            echo $e->getMessage();exit;
             $user = new Company;
         }
-        $presenter = new UserPresenter($user);
+//        $presenter = new UserPresenter($user);
 
         return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user]);
     }
@@ -85,18 +87,28 @@ class CompanyController extends Controller {
         DbHelper::startTransaction();
         try
         {
-            print_r(Input::all());
             $company = $this->c_f->process(Input::all());
             print_r($company);
+            echo 'company';
+            echo $company->id;
             exit;
+            $data = array();
+            $data['client_id'] = $company->id;
             $user = $this->f->process(Input::all());
             $this->profile_repository->attachEmptyProfile($user);
+            
+            $user = $this->f->process(Input::all());
+            $this->profile_repository->attachEmptyProfile($user);
+            
         } catch(MentordeveloperExceptionsInterface $e)
         {
+            
             DbHelper::rollback();
             $c_errors = $this->c_f->getErrors();
-//            $errors = $this->f->getErrors();
-            
+            $errors = $this->f->getErrors();
+//            print_r($c_errors);
+//            print_r($errors);
+//            exit;
             // passing the id incase fails editing an already existing item
             return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($c_errors);
         }

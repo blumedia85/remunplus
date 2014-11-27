@@ -43,7 +43,7 @@ class Company extends Model implements CompanyInterface {
 	 * @var array
 	 */
 	protected $hidden = array(
-		'password'
+		'pass'
 		
 	);
 
@@ -62,7 +62,7 @@ class Company extends Model implements CompanyInterface {
 	 * @var array
 	 */
 	protected $hashableAttributes = array(
-		'password',
+		'pass',
 		
 	);
 
@@ -157,7 +157,7 @@ class Company extends Model implements CompanyInterface {
 	 */
 	public function getPasswordName()
 	{
-		return 'password';
+		return 'pass';
 	}
 
 	/**

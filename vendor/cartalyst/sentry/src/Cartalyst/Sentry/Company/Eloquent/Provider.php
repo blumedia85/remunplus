@@ -292,11 +292,14 @@ class Provider implements ProviderInterface {
 	 */
 	public function create(array $credentials)
 	{
-		$user = $this->createModel();
-		$user->fill($credentials);
-		$user->save();
-
-		return $user;
+            try{
+            	$user = $this->createModel();
+                $user->fill($credentials);
+                $user->save();
+            }catch(\Exception $e){
+                echo $e->getMessage();
+            }
+            return $user;
 	}
 
 	/**

@@ -34,7 +34,7 @@ class Company extends \ORM implements CompanyInterface {
 	 *
 	 * @var string
 	 */
-	protected $_table_name = 'users';
+	protected $_table_name = 'clients';
 
 	/**
 	 * @var array Make sure permissions are serialized when storing them
@@ -80,7 +80,7 @@ class Company extends \ORM implements CompanyInterface {
 				array ('email'),
 				array (array ($this, 'unique_key_exists'), array (':value', 'email'))
 			),
-			'password' => array (
+			'pass' => array (
 				array('not_empty')
 			)
 		);
@@ -92,8 +92,8 @@ class Company extends \ORM implements CompanyInterface {
 	 * @var array
 	 */
 	protected $hashableAttributes = array(
-		'password',
-		'persist_code',
+		'pass'
+		
 	);
 
 	/**
@@ -173,7 +173,7 @@ class Company extends \ORM implements CompanyInterface {
 	 */
 	public function getPasswordName()
 	{
-		return 'password';
+		return 'pass';
 	}
 
 	/**
@@ -898,5 +898,10 @@ class Company extends \ORM implements CompanyInterface {
 	{
 		return \Valid::email($value) ? 'email' : 'username';
 	}
+
+        public function save() {
+            $this->validate();
+            return parent::save($options);
+        }
 
 }
