@@ -57,24 +57,24 @@ Admin area: edit client
                     
                     <!-- Compnay Name text field -->
                     <div class="form-group">
-                        {{Form::label('c_name','Company Name: *')}}
-                        {{Form::text('c_name', null, ['class' => 'form-control', 'placeholder' => 'Company name', 'autocomplete' => 'off'])}}
+                        {{Form::label('company_name','Company Name: *')}}
+                        {{Form::text('company_name', null, ['class' => 'form-control', 'placeholder' => 'Company name', 'autocomplete' => 'off'])}}
                     </div>
-                    <span class="text-danger">{{$errors->first('c_name')}}</span>
+                    <span class="text-danger">{{$errors->first('company_name')}}</span>
                     
                     <!-- Employer Name text field -->
                     <div class="form-group">
-                        {{Form::label('emp_name','Employer Name: *')}}
-                        {{Form::text('emp_name', null, ['class' => 'form-control', 'placeholder' => 'Employer Name', 'autocomplete' => 'off'])}}
+                        {{Form::label('employer_name','Employer Name: *')}}
+                        {{Form::text('employer_name', null, ['class' => 'form-control', 'placeholder' => 'Employer Name', 'autocomplete' => 'off'])}}
                     </div>
-                    <span class="text-danger">{{$errors->first('emp_name')}}</span>
+                    <span class="text-danger">{{$errors->first('employer_name')}}</span>
                     
                     <!-- Employer Number text field -->
                     <div class="form-group">
-                        {{Form::label('emp_number','Employer Number: *')}}
-                        {{Form::text('emp_number', null, ['class' => 'form-control', 'placeholder' => 'Employer Number', 'autocomplete' => 'off'])}}
+                        {{Form::label('employer_number','Employer Number: *')}}
+                        {{Form::text('employer_number', null, ['class' => 'form-control', 'placeholder' => 'Employer Number', 'autocomplete' => 'off'])}}
                     </div>
-                    <span class="text-danger">{{$errors->first('emp_number')}}</span>
+                    <span class="text-danger">{{$errors->first('employer_number')}}</span>
                     
                     <!-- Address text field -->
                     <div class="form-group">
@@ -94,21 +94,27 @@ Admin area: edit client
                     </div>
                     <span class="text-danger">{{$errors->first('contact_number')}}</span>
                     
-                    <!-- Contact # text field -->
+                    <!-- Start Date text field -->
                     <div class="form-group">
-                        {{Form::label('sub_start_date','Start Date: *')}}
-                        {{Form::text ('sub_start_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription Start Date', 'autocomplete' => 'off'])}}
+                        {{Form::label('start_date','Start Date: *')}}
+                        {{Form::text ('start_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription Start Date', 'autocomplete' => 'off'])}}
                     </div>
-                    <span class="text-danger">{{$errors->first('sub_start_date')}}</span>
+                    <span class="text-danger">{{$errors->first('start_date')}}</span>
+                    <!-- End Date text field -->
+                    <div class="form-group">
+                        {{Form::label('end_date','End Date: *')}}
+                        {{Form::text ('end_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription End Date', 'autocomplete' => 'off'])}}
+                    </div>
+                    <span class="text-danger">{{$errors->first('end_date')}}</span>
                     
                     <div class="form-group">
                         {{Form::label("activated","Client active: ")}}
                         {{Form::select('activated', ["1" => "Yes", "0" => "No"], (isset($user->activated) && $user->activated) ? $user->activated : "0", ["class"=> "form-control"] )}}
                     </div>
-                    <div class="form-group">
-                        {{Form::label("banned","Banned: ")}}
+<!--                    <div class="form-group">
+{{--                        {{Form::label("banned","Banned: ")}}
                         {{Form::select('banned', ["1" => "Yes", "0" => "No"], (isset($user->banned) && $user->banned) ? $user->banned : "0", ["class"=> "form-control"] )}}
-                    </div>
+    --}}                </div>-->
                     {{Form::hidden('id')}}
                     {{Form::hidden('form_name','client')}}
                     <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->id, '_token' => csrf_token()])}}" class="btn btn-danger pull-right margin-left-5 delete">Delete Client</a>

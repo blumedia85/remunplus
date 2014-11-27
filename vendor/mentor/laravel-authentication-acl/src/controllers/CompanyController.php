@@ -85,14 +85,20 @@ class CompanyController extends Controller {
         DbHelper::startTransaction();
         try
         {
+            print_r(Input::all());
+            $company = $this->c_f->process(Input::all());
+            print_r($company);
+            exit;
             $user = $this->f->process(Input::all());
             $this->profile_repository->attachEmptyProfile($user);
         } catch(MentordeveloperExceptionsInterface $e)
         {
             DbHelper::rollback();
-            $errors = $this->f->getErrors();
+            $c_errors = $this->c_f->getErrors();
+//            $errors = $this->f->getErrors();
+            
             // passing the id incase fails editing an already existing item
-            return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($errors);
+            return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($c_errors);
         }
 
         DbHelper::commit();
