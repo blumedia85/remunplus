@@ -80,7 +80,7 @@ View::composer(['laravel-authentication-acl::admin.permission.*'], function ($vi
 /**
  *  Client sidebar
  */
-View::composer(['laravel-authentication-acl::admin.client.*'], function ($view)
+View::composer(['laravel-authentication-acl::admin.company.*'], function ($view)
 {
     $view->with('sidebar_items', [
             "Client list" => [
@@ -91,9 +91,9 @@ View::composer(['laravel-authentication-acl::admin.client.*'], function ($view)
                     'url'  => URL::route('client.edit'),
                     "icon" => '<i class="fa fa-plus-circle"></i>'
             ],
-            "View Client"   => [
-                    'url'  => URL::route('client.list'),
-                    "icon" => '<i class="fa fa-plus-circle"></i>'
-            ]
+//            "View Client"   => [
+//                    'url'  => URL::route('client.list'),
+//                    "icon" => '<i class="fa fa-plus-circle"></i>'
+//            ]
     ]);
 });
