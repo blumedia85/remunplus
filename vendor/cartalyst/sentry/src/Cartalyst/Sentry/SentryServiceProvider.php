@@ -28,6 +28,7 @@ use Cartalyst\Sentry\Sentry;
 use Cartalyst\Sentry\Sessions\IlluminateSession;
 use Cartalyst\Sentry\Throttling\Eloquent\Provider as ThrottleProvider;
 use Cartalyst\Sentry\Users\Eloquent\Provider as UserProvider;
+use Cartalyst\Sentry\Company\Eloquent\Provider as CompanyProvider;
 use Illuminate\Support\ServiceProvider;
 
 class SentryServiceProvider extends ServiceProvider {
@@ -51,6 +52,7 @@ class SentryServiceProvider extends ServiceProvider {
 	{
 		$this->registerHasher();
 		$this->registerUserProvider();
+		$this->registerCompanyProvider();
 		$this->registerGroupProvider();
 		$this->registerThrottleProvider();
 		$this->registerSession();
@@ -141,6 +143,43 @@ class SentryServiceProvider extends ServiceProvider {
 			}
 
 			return new UserProvider($app['sentry.hasher'], $model);
+		});
+	}
+	/**
+	 * Register the company provider used by Sentry.
+	 *
+	 * @return void
+	 */
+	protected function registerCompanyProvider()
+	{
+		$this->app['sentry.company'] = $this->app->share(function($app)
+		{
+			$model = $app['config']['cartalyst/sentry::company.model'];
+
+
+			// Define the Group model to use for relationships.
+			if (method_exists($model, 'setGroupModel'))
+			{
+				$groupModel = $app['config']['cartalyst/sentry::groups.model'];
+
+				forward_static_call_array(
+					array($model, 'setGroupModel'),
+					array($groupModel)
+				);
+			}
+
+			// Define the user group pivot table name to use for relationships.
+			if (method_exists($model, 'setUserGroupsPivot'))
+			{
+				$pivotTable = $app['config']['cartalyst/sentry::user_groups_pivot_table'];
+
+				forward_static_call_array(
+					array($model, 'setUserGroupsPivot'),
+					array($pivotTable)
+				);
+			}
+
+			return new CompanyProvider($app['sentry.hasher'], $model);
 		});
 	}
 
@@ -287,6 +326,7 @@ class SentryServiceProvider extends ServiceProvider {
 		{
 			return new Sentry(
 				$app['sentry.user'],
+				$app['sentry.company'],
 				$app['sentry.group'],
 				$app['sentry.throttle'],
 				$app['sentry.session'],

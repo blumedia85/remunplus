@@ -27,12 +27,12 @@ Admin area: edit client
             <div class="panel-body">
 <!--                <div class="row">
                     <div class="col-md-12 col-xs-12">
-                        <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\ClientController@postEditProfile',["user_id" => $user->id])}}" class="btn btn-info pull-right" {{! isset($user->id) ? 'disabled="disabled"' : ''}}><i class="fa fa-user"></i> Edit profile</a>
+                        <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@postEditProfile',["user_id" => $user->id])}}" class="btn btn-info pull-right" {{! isset($user->id) ? 'disabled="disabled"' : ''}}><i class="fa fa-user"></i> Edit profile</a>
                     </div>
                 </div>-->
                 <div class="col-md-12 col-xs-12">
                     <h4>Client data</h4>
-                    {{Form::model($user, [ 'url' => URL::action('Mentordeveloper\Authentication\Controllers\ClientController@postEditClient')] ) }}
+                    {{Form::model($user, [ 'url' => URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@postEditCompany')] ) }}
                     {{-- Field hidden to fix chrome and safari autocomplete bug --}}
                     {{Form::password('__to_hide_password_autocomplete', ['class' => 'hidden'])}}
                     <!-- email text field -->
@@ -78,7 +78,7 @@ Admin area: edit client
                     
                     <!-- Address text field -->
                     <div class="form-group">
-                        {{Form::label('address','Address: *')}}
+                        {{Form::label('address','Address: ')}}
                         {{Form::textarea ('address', null, ['class' => 'form-control', 'placeholder' => 'user email', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('address')}}</span>
@@ -89,10 +89,17 @@ Admin area: edit client
                     </div>
                     <!-- Contact # text field -->
                     <div class="form-group">
-                        {{Form::label('contact_number','Address: *')}}
+                        {{Form::label('contact_number','Contact Number: *')}}
                         {{Form::text ('contact_number', null, ['class' => 'form-control', 'placeholder' => 'Contact #', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('contact_number')}}</span>
+                    
+                    <!-- Contact # text field -->
+                    <div class="form-group">
+                        {{Form::label('sub_start_date','Start Date: *')}}
+                        {{Form::text ('sub_start_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription Start Date', 'autocomplete' => 'off'])}}
+                    </div>
+                    <span class="text-danger">{{$errors->first('sub_start_date')}}</span>
                     
                     <div class="form-group">
                         {{Form::label("activated","Client active: ")}}
@@ -103,8 +110,8 @@ Admin area: edit client
                         {{Form::select('banned', ["1" => "Yes", "0" => "No"], (isset($user->banned) && $user->banned) ? $user->banned : "0", ["class"=> "form-control"] )}}
                     </div>
                     {{Form::hidden('id')}}
-                    {{Form::hidden('form_name','user')}}
-                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\ClientController@deleteClient',['id' => $user->id, '_token' => csrf_token()])}}" class="btn btn-danger pull-right margin-left-5 delete">Delete Client</a>
+                    {{Form::hidden('form_name','client')}}
+                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->id, '_token' => csrf_token()])}}" class="btn btn-danger pull-right margin-left-5 delete">Delete Client</a>
                     {{Form::submit('Save', array("class"=>"btn btn-info pull-right "))}}
                     {{Form::close()}}
                     </div>

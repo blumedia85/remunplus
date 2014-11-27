@@ -195,65 +195,65 @@ Route::group(['before' => ['admin_logged', 'can_see']], function ()
      */
     Route::get('/payadmin/client/list', [
             'as'   => 'client.list',
-            'uses' => 'Mentordeveloper\Authentication\Controllers\ClientController@getList'
+            'uses' => 'Mentordeveloper\Authentication\Controllers\CompanyController@getList'
     ]);
     Route::get('/payadmin/client/edit', [
             'as'   => 'client.edit',
-            'uses' => 'Mentordeveloper\Authentication\Controllers\ClientController@editClient'
+            'uses' => 'Mentordeveloper\Authentication\Controllers\CompanyController@editCompany'
     ]);
     Route::post('/payadmin/client/edit', [
             "before" => "csrf",
             'as'     => 'client.edit',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@postEditClient'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@postEditCompany'
     ]);
     
     Route::get('/payadmin/client/delete', [
             "before" => "csrf",
             'as'     => 'client.delete',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@deleteClient'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany'
     ]);
     Route::post('/payadmin/client/groups/add', [
             "before" => "csrf",
             'as'     => 'client.groups.add',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@addGroup'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@addGroup'
     ]);
     Route::post('/payadmin/client/groups/delete', [
             "before" => "csrf",
             'as'     => 'client.groups.delete',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@deleteGroup'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@deleteGroup'
     ]);
     Route::post('/payadmin/client/editpermission', [
             "before" => "csrf",
             'as'     => 'users.client.permission',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@editPermission'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@editPermission'
     ]);
     Route::get('/payadmin/client/profile/edit', [
             'as'   => 'client.profile.edit',
-            'uses' => 'Mentordeveloper\Authentication\Controllers\ClientController@editProfile'
+            'uses' => 'Mentordeveloper\Authentication\Controllers\CompanyController@editProfile'
     ]);
     Route::post('/payadmin/client/profile/edit', [
             'before' => 'csrf',
             'as'     => 'client.profile.edit',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@postEditProfile'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@postEditProfile'
     ]);
     Route::post('/payadmin/client/profile/addField', [
             'before' => 'csrf',
             'as'     => 'client.profile.addfield',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@addCustomFieldType'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@addCustomFieldType'
     ]);
     Route::post('/payadmin/client/profile/deleteField', [
             'before' => 'csrf',
             'as'     => 'client.profile.deletefield',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@deleteCustomFieldType'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@deleteCustomFieldType'
     ]);
     Route::post('/payadmin/client/profile/avatar', [
             'before' => 'csrf',
             'as'     => 'client.profile.changeavatar',
-            'uses'   => 'Mentordeveloper\Authentication\Controllers\ClientController@changeAvatar'
+            'uses'   => 'Mentordeveloper\Authentication\Controllers\CompanyController@changeAvatar'
     ]);
     Route::get('/payadmin/client/profile/self', [
         'as' => 'client.selfprofile.edit',
-        'uses' => 'Mentordeveloper\Authentication\Controllers\ClientController@editOwnProfile'
+        'uses' => 'Mentordeveloper\Authentication\Controllers\CompanyController@editOwnProfile'
     ]);
     
     Route::get('/payadmin/employee/list', [

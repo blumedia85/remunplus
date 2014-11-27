@@ -98,6 +98,21 @@ return array(
 		'model' => 'Cartalyst\Sentry\Groups\Eloquent\Group',
 
 	),
+        'company' => array(
+
+		/*
+		|--------------------------------------------------------------------------
+		| Model
+		|--------------------------------------------------------------------------
+		|
+		| When using the "eloquent" driver, we need to know which
+		| Eloquent models should be used throughout Sentry.
+		|
+		*/
+
+		'model' => 'Cartalyst\Sentry\Company\Eloquent\Company',
+
+	),
 
 	/*
 	|--------------------------------------------------------------------------

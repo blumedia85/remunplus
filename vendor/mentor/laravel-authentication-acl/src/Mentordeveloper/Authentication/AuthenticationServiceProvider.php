@@ -17,6 +17,7 @@ use Mentordeveloper\Authentication\Repository\EloquentPermissionRepository;
 use Mentordeveloper\Authentication\Repository\EloquentUserProfileRepository;
 use Mentordeveloper\Authentication\Repository\SentryGroupRepository;
 use Mentordeveloper\Authentication\Repository\SentryUserRepository;
+use Mentordeveloper\Authentication\Repository\SentryCompanyRepository;
 use Mentordeveloper\Authentication\Services\UserRegisterService;
 use Mentordeveloper\Library\Form\FormModel;
 
@@ -97,6 +98,10 @@ class AuthenticationServiceProvider extends ServiceProvider
         $this->app->bind('user_repository', function ($app, $config = null)
         {
             return new SentryUserRepository($config);
+        });
+        $this->app->bind('company_repository', function ($app, $config = null)
+        {
+            return new SentryCompanyRepository($config);
         });
 
         $this->app->bind('group_repository', function ()

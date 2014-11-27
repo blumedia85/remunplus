@@ -7,7 +7,7 @@
             <div class="col-lg-10 col-md-9 col-sm-9">
                 {{Form::open(['method' => 'get', 'class' => 'form-inline'])}}
                     <div class="form-group">
-                        {{Form::select('order_by', ["" => "select column", "first_name" => "First name", "last_name" => "Last name", "email" => "Email", "last_login" => "Last login", "active" => "Active"], Input::get('order_by',''), ['class' => 'form-control'])}}
+                        {{Form::select('order_by', ["" => "select column", "first_name" => "First name", "company_name" => "Company name", "email" => "Email", "last_login" => "Last login", "active" => "Active"], Input::get('order_by',''), ['class' => 'form-control'])}}
                     </div>
                     <div class="form-group">
                         {{Form::select('ordering', ["asc" => "Ascending", "desc" => "descending"], Input::get('ordering','asc'), ['class' =>'form-control'])}}
@@ -18,7 +18,7 @@
                 {{Form::close()}}
             </div>
             <div class="col-lg-2 col-md-3 col-sm-3">
-                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\ClientController@editClient')}}" class="btn btn-info"><i class="fa fa-plus"></i> Add New</a>
+                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany')}}" class="btn btn-info"><i class="fa fa-plus"></i> Add New</a>
             </div>
         </div>
       <div class="row">
@@ -44,8 +44,8 @@
                               <td class="hidden-xs">{{$user->last_login ? $user->last_login : 'not logged yet.'}}</td>
                               <td>
                                   @if(! $user->protected)
-                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\ClientController@editClient', ['id' => $user->id])}}"><i class="fa fa-pencil-square-o fa-2x"></i></a>
-                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\ClientController@deleteClient',['id' => $user->id, '_token' => csrf_token()])}}" class="margin-left-5 delete"><i class="fa fa-trash-o fa-2x"></i></a>
+                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany', ['id' => $user->id])}}"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->id, '_token' => csrf_token()])}}" class="margin-left-5 delete"><i class="fa fa-trash-o fa-2x"></i></a>
                                   @else
                                       <i class="fa fa-times fa-2x light-blue"></i>
                                       <i class="fa fa-times fa-2x margin-left-12 light-blue"></i>

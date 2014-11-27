@@ -1,4 +1,4 @@
-<?php namespace Cartalyst\Sentry\Client;
+<?php namespace Cartalyst\Sentry\Company;
 /**
  * Part of the Sentry package.
  *
@@ -18,6 +18,8 @@
  * @link       http://cartalyst.com
  */
 
-class ClientExistsException extends \UnexpectedValueException {}
-class ClientNotFoundException extends \UnexpectedValueException {}
-class NameRequiredException extends \UnexpectedValueException {}
+
+class PasswordRequiredException extends \UnexpectedValueException {}
+class CompanyNotFoundException extends \OutOfBoundsException {}
+class CompanyExistsException extends \UnexpectedValueException {}
+class WrongPasswordException extends CompanyNotFoundException {}

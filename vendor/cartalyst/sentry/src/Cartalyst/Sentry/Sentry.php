@@ -31,9 +31,14 @@ use Cartalyst\Sentry\Users\LoginRequiredException;
 use Cartalyst\Sentry\Users\PasswordRequiredException;
 use Cartalyst\Sentry\Users\Eloquent\Provider as UserProvider;
 use Cartalyst\Sentry\Users\ProviderInterface as UserProviderInterface;
+use Cartalyst\Sentry\Company\Eloquent\Provider as CompanyProvider;
+use Cartalyst\Sentry\Company\ProviderInterface as CompanyProviderInterface;
 use Cartalyst\Sentry\Users\UserInterface;
 use Cartalyst\Sentry\Users\UserNotFoundException;
 use Cartalyst\Sentry\Users\UserNotActivatedException;
+use Cartalyst\Sentry\Company\CompanyInterface;
+use Cartalyst\Sentry\Company\CompanyNotFoundException;
+use Cartalyst\Sentry\Company\CompanyNotActivatedException;
 
 class Sentry {
 
@@ -46,6 +51,15 @@ class Sentry {
 	 * @var \Cartalyst\Sentry\Users\UserInterface
 	 */
 	protected $user;
+        /**
+	 * The user that's been retrieved and is used
+	 * for authentication. Authentication methods
+	 * are available for finding the user to set
+	 * here.
+	 *
+	 * @var \Cartalyst\Sentry\Company\CompanyInterface
+	 */
+	protected $company;
 
 	/**
 	 * The session driver used by Sentry.
@@ -69,6 +83,14 @@ class Sentry {
 	 * @var \Cartalyst\Sentry\Users\ProviderInterface
 	 */
 	protected $userProvider;
+	/**
+	 * The Company provider, used for retrieving
+	 * objects which implement the Sentry Company
+	 * interface.
+	 *
+	 * @var \Cartalyst\Sentry\Company\ProviderInterface
+	 */
+	protected $companyProvider;
 
 	/**
 	 * The group provider, used for retrieving
@@ -89,7 +111,7 @@ class Sentry {
 	protected $throttleProvider;
 
 	/**
-	 * The client's IP address associated with Sentry.
+	 * The company's IP address associated with Sentry.
 	 *
 	 * @var string
 	 */
@@ -99,6 +121,7 @@ class Sentry {
 	 * Create a new Sentry object.
 	 *
 	 * @param  \Cartalyst\Sentry\Users\ProviderInterface $userProvider
+	 * @param  \Cartalyst\Sentry\Company\ProviderInterface $companyProvider
 	 * @param  \Cartalyst\Sentry\Groups\ProviderInterface $groupProvider
 	 * @param  \Cartalyst\Sentry\Throttling\ProviderInterface $throttleProvider
 	 * @param  \Cartalyst\Sentry\Sessions\SessionInterface $session
@@ -108,6 +131,7 @@ class Sentry {
 	 */
 	public function __construct(
 		UserProviderInterface $userProvider = null,
+		CompanyProviderInterface $companyProvider = null,
 		GroupProviderInterface $groupProvider = null,
 		ThrottleProviderInterface $throttleProvider = null,
 		SessionInterface $session = null,
@@ -116,6 +140,7 @@ class Sentry {
 	)
 	{
 		$this->userProvider     = $userProvider ?: new UserProvider(new NativeHasher);
+		$this->companyProvider     = $companyProvider ?: new CompanyProvider(new NativeHasher);
 		$this->groupProvider    = $groupProvider ?: new GroupProvider;
 		$this->throttleProvider = $throttleProvider ?: new ThrottleProvider($this->userProvider);
 
@@ -146,6 +171,20 @@ class Sentry {
 		}
 
 		return $this->user = $user;
+	}
+	/**
+	 * Registers a Company by giving the required credentials
+	 * and an optional flag for whether to activate the user.
+	 *
+	 * @param  array  $credentials
+	 * @param  bool   $activate
+	 * @return \Cartalyst\Sentry\Company\CompanyInterface
+	 */
+	public function registerCompany(array $credentials, $activate = false)
+	{
+		$company = $this->companyProvider->create($credentials);
+
+		return $this->company = $company;
 	}
 
 
@@ -545,9 +584,9 @@ class Sentry {
 	 * @return \Cartalyst\Sentry\Groups\GroupInterface  $group
 	 * @throws \Cartalyst\Sentry\Groups\GroupNotFoundException
 	 */
-	public function findFromClientID($clientID)
+	public function findFromCompanyID($companyID)
 	{
-		return $this->groupProvider->findByName($clientID);
+		return $this->groupProvider->findByName($companyID);
 	}
 
 	/**
@@ -688,6 +727,16 @@ class Sentry {
 	public function createUser(array $credentials)
 	{
 		return $this->userProvider->create($credentials);
+	}
+	/**
+	 * Creates a Company.
+	 *
+	 * @param  array  $credentials
+	 * @return \Cartalyst\Sentry\Company\UserInterface
+	 */
+	public function createCompany(array $credentials)
+	{
+		return $this->companyProvider->create($credentials);
 	}
 
 	/**

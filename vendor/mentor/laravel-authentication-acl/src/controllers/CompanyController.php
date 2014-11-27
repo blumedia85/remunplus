@@ -17,20 +17,24 @@ use Mentordeveloper\Authentication\Validators\UserProfileAvatarValidator;
 use Mentordeveloper\Library\Exceptions\NotFoundException;
 use Mentordeveloper\Library\Form\FormModel;
 use Mentordeveloper\Authentication\Models\User;
+use Mentordeveloper\Authentication\Models\Company;
 use Mentordeveloper\Authentication\Helpers\FormHelper;
 use Mentordeveloper\Authentication\Exceptions\UserNotFoundException;
 use Mentordeveloper\Authentication\Validators\UserValidator;
+use Mentordeveloper\Authentication\Validators\CompanyValidator;
 use Mentordeveloper\Library\Exceptions\MentordeveloperExceptionsInterface;
 use Mentordeveloper\Authentication\Validators\UserProfileValidator;
 use View, Input, Redirect, App, Config, Controller;
 use Mentordeveloper\Authentication\Interfaces\AuthenticateInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-class ClientController extends Controller {
+class CompanyController extends Controller {
 /**
      * @var \Mentordeveloper\Authentication\Repository\SentryUserRepository
      */
     protected $user_repository;
+    protected $company_repository;
     protected $user_validator;
+    protected $company_validator;
     /**
      * @var \Mentordeveloper\Authentication\Helpers\FormHelper
      */
@@ -43,9 +47,12 @@ class ClientController extends Controller {
     protected $auth;
     protected $register_service;
     protected $custom_profile_repository;
-    public function __construct(UserValidator $v, FormHelper $fh, UserProfileValidator $vp, AuthenticateInterface $auth) {
+    public function __construct(UserValidator $v, CompanyValidator $c_v, FormHelper $fh, UserProfileValidator $vp, AuthenticateInterface $auth) {
+        $this->company_repository = App::make('company_repository');
         $this->user_repository = App::make('user_repository');
         $this->user_validator = $v;
+        $this->company_validator = $c_v;
+        $this->c_f = App::make('form_model', [$this->company_validator, $this->company_repository]);
         $this->f = App::make('form_model', [$this->user_validator, $this->user_repository]);
         $this->form_helper = $fh;
         $this->profile_validator = $vp;
@@ -55,24 +62,24 @@ class ClientController extends Controller {
         $this->custom_profile_repository = App::make('custom_profile_repository');
     }
     public function getList(){
-        $users = $this->user_repository->all(Input::except(['page']));
+        $companys = $this->company_repository->all(Input::except(['page']));
 
-        return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $users]);
+        return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companys]);
 
     }
-    public function editClient(){
+    public function editCompany(){
         try
         {
-            $user = $this->user_repository->find(Input::get('id'));
+            $user = $this->company_repository->find(Input::get('id'));
         } catch(MentordeveloperExceptionsInterface $e)
         {
-            $user = new User;
+            $user = new Company;
         }
         $presenter = new UserPresenter($user);
 
-        return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user, "presenter" => $presenter]);
+        return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user]);
     }
-    public function postEditClient()
+    public function postEditCompany()
     {
         $id = Input::get('id');
         DbHelper::startTransaction();
@@ -85,7 +92,7 @@ class ClientController extends Controller {
             DbHelper::rollback();
             $errors = $this->f->getErrors();
             // passing the id incase fails editing an already existing item
-            return Redirect::route("users.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($errors);
+            return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($errors);
         }
 
         DbHelper::commit();
@@ -94,7 +101,7 @@ class ClientController extends Controller {
                        ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.user_edit_success'));
     }
 
-    public function deleteClient()
+    public function deleteCompany()
     {
         try
         {
