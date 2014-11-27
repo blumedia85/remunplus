@@ -1,4 +1,16 @@
 <?php
+$server = array();
+$app_link = '';
+if(isset($_SERVER['HTTP_HOST']))
+    $server = explode(".",$_SERVER['HTTP_HOST']);
+if(empty($server))
+    $app_link = 'http://payrolsys.local/';
+elseif(isset($server[2]) && ($server[2]=='local'))
+    $app_link = 'http://payrolsys.local/';
+elseif((isset($server[1])) && ($server[1]=='local'))
+    $app_link = 'http://payrolsys.local/';
+else
+    $app_link = 'http://www.blumediaconsultants.com/remunplus/public/';
 
 return array(
 

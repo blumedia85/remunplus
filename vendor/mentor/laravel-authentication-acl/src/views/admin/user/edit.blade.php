@@ -71,7 +71,6 @@ Admin area: edit user
                     <div class="col-md-6 col-xs-12">
                         <h4><i class="fa fa-users"></i> Groups</h4>
                         @include('laravel-authentication-acl::admin.user.groups')
-
                         {{-- group permission form --}}
                     </div>
                 </div>

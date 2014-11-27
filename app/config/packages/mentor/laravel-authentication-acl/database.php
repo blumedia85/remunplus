@@ -1,4 +1,24 @@
 <?php
+$server = array();
+$db_password = '';
+$db_host = 'localhost';
+$db_username = 'root';
+$db_name = 'payrol_system';
+if(isset($_SERVER['HTTP_HOST']))
+    $server = explode(".",$_SERVER['HTTP_HOST']);
+if(empty($server))
+    $db_password = '';
+elseif(isset($server[2]) && ($server[2]=='local'))
+    $db_password = '';
+elseif((isset($server[1])) && ($server[1]=='local'))
+    $db_password = '';
+else{
+    $db_password = 'dev@Echelon85';
+    $db_host = 'renumerm.db.9426656.hostedresource.com';
+    $db_username = 'renumerm';
+    $db_name = 'renumerm';
+
+}
 return [
     /*
     |--------------------------------------------------------------------------
@@ -22,10 +42,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'payrol_system',
-            'username'  => 'root',
-            'password'  => '',
+            'host'      => $db_host,
+            'database'  => $db_name,
+            'username'  => $db_username,
+            'password'  => $db_password,
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
