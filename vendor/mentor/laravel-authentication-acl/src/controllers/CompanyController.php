@@ -63,7 +63,8 @@ class CompanyController extends Controller {
     }
     public function getList(){
         $companies = $this->company_repository->all(Input::except(['page']));
-
+//        $companies = Company::all();
+//        print_r($companies);exit;
         return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
     }
@@ -74,11 +75,11 @@ class CompanyController extends Controller {
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
-            echo $e->getMessage();exit;
+//            echo $e->getMessage();exit;
             $user = new Company;
         }
 //        $presenter = new UserPresenter($user);
-
+//echo '<pre>';print_r($user);exit;
         return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user]);
     }
     public function postEditCompany()

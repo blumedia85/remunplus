@@ -2,7 +2,7 @@
 /**
  * Interface BaseRepositoryInterface
  *
- * @author mentor beschi j.beschi@mentor.com
+ * @author mentor mentordeveloper@gmail.com
  */
 interface BaseRepositoryInterface 
 {

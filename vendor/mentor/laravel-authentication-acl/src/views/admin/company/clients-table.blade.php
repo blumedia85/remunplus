@@ -37,9 +37,9 @@
                       <tbody>
                           @foreach($users as $user)
                           <tr>
-                              <td class="hidden-xs">{{$user->first_name}}</td>
+                              <td class="hidden-xs">{{$user->company_name}}</td>
                               <td>{{$user->email}}</td>
-                              <td class="hidden-xs">{{$user->last_name}}</td>
+                              <td class="hidden-xs">{{$user->contact_number}}</td>
                               <td>{{$user->activated ? '<i class="fa fa-circle green"></i>' : '<i class="fa fa-circle-o red"></i>'}}</td>
                               <td class="hidden-xs">{{$user->last_login ? $user->last_login : 'not logged yet.'}}</td>
                               <td>

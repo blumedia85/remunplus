@@ -2,7 +2,7 @@
 /**
  * Class EloquentBaseRepository
  *
- * @author mentor beschi mentordeveloper@gmail.com
+ * @author mentor mentordeveloper@gmail.com
  */
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;

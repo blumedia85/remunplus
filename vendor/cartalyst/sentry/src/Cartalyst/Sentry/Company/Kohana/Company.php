@@ -58,7 +58,7 @@ class Company extends \ORM implements CompanyInterface {
 	 * @var array
 	 */
 	protected $_has_many = array (
-		'groups' => array ('model' => 'Group', 'through' => 'users_groups')
+		'users' => array ('model' => 'users', 'through' => 'users')
 	);
 
 	/**

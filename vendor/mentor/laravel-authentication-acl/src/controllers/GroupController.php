@@ -40,7 +40,6 @@ class GroupController extends \Controller
     public function getList()
     {
         $groups = $this->group_repository->all(Input::all());
-
         return View::make('laravel-authentication-acl::admin.group.list')->with(["groups" => $groups]);
     }
 

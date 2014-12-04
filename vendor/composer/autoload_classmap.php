@@ -674,6 +674,7 @@ return array(
     'Mentordeveloper\\Authentication\\Repository\\SentryGroupRepository' => $vendorDir . '/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryGroupRepository.php',
     'Mentordeveloper\\Authentication\\Repository\\SentryUserRepository' => $vendorDir . '/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryUserRepository.php',
     'Mentordeveloper\\Authentication\\Repository\\UserRepositorySearchFilter' => $vendorDir . '/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/UserRepositorySearchFilter.php',
+    'Mentordeveloper\\Authentication\\Repository\\CompanyRepositorySearchFilter' => $vendorDir . '/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/CompanyRepositorySearchFilter.php',
     'Mentordeveloper\\Authentication\\Seeds\\DbSeeder' => $vendorDir . '/mentor/laravel-authentication-acl/src/seeds/DbSeeder.php',
     'Mentordeveloper\\Authentication\\Seeds\\GroupsSeeder' => $vendorDir . '/mentor/laravel-authentication-acl/src/seeds/DbSeeder.php',
     'Mentordeveloper\\Authentication\\Seeds\\PermissionSeeder' => $vendorDir . '/mentor/laravel-authentication-acl/src/seeds/DbSeeder.php',

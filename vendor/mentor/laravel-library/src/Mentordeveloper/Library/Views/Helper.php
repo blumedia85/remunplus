@@ -2,7 +2,7 @@
 /**
  * Class View Helper
  *
- * @author mentor beschi j.beschi@mentor.com
+ * @author mentor mentordeveloper@gmail.com
  */
 use Request;
 use Route;
