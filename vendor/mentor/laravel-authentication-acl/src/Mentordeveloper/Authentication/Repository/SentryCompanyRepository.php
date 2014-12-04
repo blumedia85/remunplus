@@ -101,7 +101,6 @@ class SentryCompanyRepository extends EloquentBaseRepository implements CompanyR
         
         $per_page = Config::get('laravel-authentication-acl::users_per_page');
         $user_repository_search = $user_repository_search ? $user_repository_search : new CompanyRepositorySearchFilter($per_page);
-        print_r($user_repository_search);
         return $user_repository_search->all($input_filter);
     }
 
