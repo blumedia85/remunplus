@@ -25,11 +25,6 @@ Admin area: edit client
                 </div>
             </div>
             <div class="panel-body">
-<!--                <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                        <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@postEditProfile',["user_id" => $user->id])}}" class="btn btn-info pull-right" {{! isset($user->id) ? 'disabled="disabled"' : ''}}><i class="fa fa-user"></i> Edit profile</a>
-                    </div>
-                </div>-->
                 <div class="col-md-12 col-xs-12">
                     <h4>Client data</h4>
                     {{Form::model($user, [ 'url' => URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@postEditCompany')] ) }}
@@ -65,14 +60,14 @@ Admin area: edit client
                     <!-- Employer Name text field -->
                     <div class="form-group">
                         {{Form::label('employer_name','Employer Name: *')}}
-                        {{Form::text('employer_name', null, ['class' => 'form-control', 'placeholder' => 'Employer Name', 'autocomplete' => 'off'])}}
+                        {{Form::text('employer_name', (isset($user->emp_name)) ? $user->emp_name : null, ['class' => 'form-control', 'placeholder' => 'Employer Name', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('employer_name')}}</span>
                     
                     <!-- Employer Number text field -->
                     <div class="form-group">
                         {{Form::label('employer_number','Employer Number: *')}}
-                        {{Form::text('employer_number', null, ['class' => 'form-control', 'placeholder' => 'Employer Number', 'autocomplete' => 'off'])}}
+                        {{Form::text('employer_number', (isset($user->emp_number)) ? $user->emp_number : null , ['class' => 'form-control', 'placeholder' => 'Employer Number', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('employer_number')}}</span>
                     
@@ -85,7 +80,7 @@ Admin area: edit client
                    
                     <div class="form-group">
                         {{Form::label("parish","Parish: ")}}
-                        {{Form::select('parish', ["1" => "parish 1", "0" => "parish 2"], (isset($user->activated) && $user->activated) ? $user->activated : "0", ["class"=> "form-control"] )}}
+                        {{Form::select('parish', ["1" => "parish 1", "0" => "parish 2"], (isset($user->parish) && $user->parish) ? $user->parish : "0", ["class"=> "form-control"] )}}
                     </div>
                     <!-- Contact # text field -->
                     <div class="form-group">
@@ -111,13 +106,10 @@ Admin area: edit client
                         {{Form::label("is_active","Client active: ")}}
                         {{Form::select('is_active', ["1" => "Yes", "0" => "No"], (isset($user->is_active) && $user->is_active) ? $user->is_active : "0", ["class"=> "form-control"] )}}
                     </div>
-<!--                    <div class="form-group">
-{{--                        {{Form::label("banned","Banned: ")}}
-                        {{Form::select('banned', ["1" => "Yes", "0" => "No"], (isset($user->banned) && $user->banned) ? $user->banned : "0", ["class"=> "form-control"] )}}
-    --}}                </div>-->
+
                     {{Form::hidden('id')}}
                     {{Form::hidden('form_name','client')}}
-                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->id, '_token' => csrf_token()])}}" class="btn btn-danger pull-right margin-left-5 delete">Delete Client</a>
+                    <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => isset($user->id) ? $user->id : "user_id", '_token' => csrf_token()])}}" class="btn btn-danger pull-right margin-left-5 delete">Delete Client</a>
                     {{Form::submit('Save', array("class"=>"btn btn-info pull-right "))}}
                     {{Form::close()}}
                     </div>
