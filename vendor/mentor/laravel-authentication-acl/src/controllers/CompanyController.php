@@ -62,16 +62,16 @@ class CompanyController extends Controller {
         $this->custom_profile_repository = App::make('custom_profile_repository');
     }
     public function getList(){
-        $companies = $this->company_repository->all(Input::except(['page']));
-//        $companies = Company::all();
-//        print_r($companies);exit;
+//        $companies = $this->company_repository->all(Input::except(['page']));
+        $companies = Company::select()->get();
         return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
     }
     public function editCompany(){
         try
         {
-            $user = $this->company_repository->find(Input::get('id'));
+//            $user = $this->company_repository->find(Input::get('id'));
+            $user = Company::find(Input::get('id'));
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
