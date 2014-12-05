@@ -72,14 +72,20 @@ class CompanyController extends \Controller {
     public function editCompany(){
         try
         {
+            echo Input::get('id');
             $user = $this->company_repository->find(Input::get('id'));
-//            $user = Company::find(Input::get('id'));
+            print_r($user);
+            $user = Company::find(Input::get('id'));
+            print_r($user);
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
+            echo $e->getMessage();exit;
+            
 
             $user = new Company;
         }
+        exit;
 //        $presenter = new UserPresenter($user);
 
         return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user]);
