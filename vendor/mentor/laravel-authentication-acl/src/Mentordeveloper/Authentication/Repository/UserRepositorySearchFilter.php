@@ -79,9 +79,10 @@ class UserRepositorySearchFilter
         $this->authenticator = App::make('authenticator');
         $logged_user = $this->authenticator->getLoggedUser();
         $client_id = $logged_user->client_id;
+        $is_hidden = $logged_user->is_hidden;
         if(!empty($client_id))
             $q = $q->where($this->user_table_name . '.client_id', '=', $client_id);
-        $q = $q->where($this->user_table_name . '.is_hidden', '=', 1);
+        $q = $q->where($this->user_table_name . '.is_hidden', '=', $is_hidden);
 
         if($this->isSettedInputFilter($input_filter))
         {
