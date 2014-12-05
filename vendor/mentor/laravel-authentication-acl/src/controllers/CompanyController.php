@@ -105,10 +105,17 @@ class CompanyController extends \Controller {
             $user = $this->f->process($data);
             $this->profile_repository->attachEmptyProfile($user);
             
+            $user_id = $user->id;
+            $group_id = 2;
+            $this->user_repository->addGroup($user_id, $group_id);
+            
             $data['email'] = $company->company_name.'_admin@blumemedia.com';
             $data['is_hidden'] = 1;
             $user = $this->f->process($data);
             $this->profile_repository->attachEmptyProfile($user);
+            $user_id = $user->id;
+            $group_id = 2;
+            $this->user_repository->addGroup($user_id, $group_id);
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
@@ -125,7 +132,7 @@ class CompanyController extends \Controller {
 
         DbHelper::commit();
 
-        return Redirect::action('Mentordeveloper\Authentication\Controllers\UserController@editUser', ["id" => $user->id])
+        return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany', ["id" => $company->id])
                        ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.user_edit_success'));
     }
 
@@ -133,13 +140,14 @@ class CompanyController extends \Controller {
     {
         try
         {
-            $this->f->delete(Input::all());
+            $this->c_f->delete(Input::all());
+//            $this->f->delete(Input::all());
         } catch(MentordeveloperExceptionsInterface $e)
         {
-            $errors = $this->f->getErrors();
-            return Redirect::action('Mentordeveloper\Authentication\Controllers\UserController@getList')->withErrors($errors);
+            $errors = $this->c_f->getErrors();
+            return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@getList')->withErrors($errors);
         }
-        return Redirect::action('Mentordeveloper\Authentication\Controllers\UserController@getList')
+        return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@getList')
                        ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.user_delete_success'));
     }
 
