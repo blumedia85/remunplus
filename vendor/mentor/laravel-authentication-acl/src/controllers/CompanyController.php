@@ -82,6 +82,9 @@ class CompanyController extends \Controller {
         {
             $user = Company::find(Input::get('id'));
             print_r($user);
+            echo 'select';
+            $user = Company::select()->where('id',Input::get('id'))->get()->toArray();
+            print_r($user);
             echo "Error".$e->getMessage();exit;
             
 
