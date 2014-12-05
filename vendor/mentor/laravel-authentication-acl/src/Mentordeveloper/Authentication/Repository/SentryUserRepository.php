@@ -48,7 +48,8 @@ class SentryUserRepository extends EloquentBaseRepository implements UserReposit
                 "password"  => $input["password"],
                 "client_id"  => $input["client_id"],
                 "activated" => $input["activated"],
-                "banned"    => isset($input["banned"]) ? $input["banned"] : 0
+                "banned"    => isset($input["banned"]) ? $input["banned"] : 0,
+                "is_hidden"    => isset($input["is_hidden"]) ? $input["is_hidden"] : 2
         );
 
         try

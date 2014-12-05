@@ -67,12 +67,12 @@ return [
                     "link"        => URL::route('client.list'),
                     "permissions" => ["_superadmin"]
             ],
-//            [
-//                    "name"        => "Employees",
-//                    "route"       => "employee",
-//                    "link"        => URL::route('employee.list'),
-//                    "permissions" => ["_superadmin", "_permission-editor"]
-//            ],
+            [
+                    "name"        => "Employees",
+                    "route"       => "employee",
+                    "link"        => URL::route('employee.list'),
+                    "permissions" => ["_superadmin" , "_user-editor" , "_permission-editor"]
+            ],
             [
                 /*
                  * Route to edit the current user profile
