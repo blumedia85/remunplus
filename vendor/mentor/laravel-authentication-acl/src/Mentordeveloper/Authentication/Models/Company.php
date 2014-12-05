@@ -18,7 +18,7 @@ class Company extends BaseModel {
 
     protected $table = "clients";
 
-    protected $guarded = ["id"];
+    protected $guarded = ["id",'pass'];
 
     
 

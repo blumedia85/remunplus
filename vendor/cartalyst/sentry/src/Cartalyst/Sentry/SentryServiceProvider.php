@@ -156,27 +156,27 @@ class SentryServiceProvider extends ServiceProvider {
 		{
 			$model = $app['config']['cartalyst/sentry::company.model'];
 
-//			// Define the Group model to use for relationships.
-//			if (method_exists($model, 'setGroupModel'))
-//			{
-//				$groupModel = $app['config']['cartalyst/sentry::groups.model'];
-//
-//				forward_static_call_array(
-//					array($model, 'setGroupModel'),
-//					array($groupModel)
-//				);
-//			}
-//
-//			// Define the user group pivot table name to use for relationships.
-//			if (method_exists($model, 'setUserGroupsPivot'))
-//			{
-//				$pivotTable = $app['config']['cartalyst/sentry::user_groups_pivot_table'];
-//
-//				forward_static_call_array(
-//					array($model, 'setUserGroupsPivot'),
-//					array($pivotTable)
-//				);
-//			}
+			// Define the Group model to use for relationships.
+			if (method_exists($model, 'setGroupModel'))
+			{
+				$groupModel = $app['config']['cartalyst/sentry::groups.model'];
+
+				forward_static_call_array(
+					array($model, 'setGroupModel'),
+					array($groupModel)
+				);
+			}
+
+			// Define the user group pivot table name to use for relationships.
+			if (method_exists($model, 'setUserGroupsPivot'))
+			{
+				$pivotTable = $app['config']['cartalyst/sentry::user_groups_pivot_table'];
+
+				forward_static_call_array(
+					array($model, 'setUserGroupsPivot'),
+					array($pivotTable)
+				);
+			}
 
 			return new CompanyProvider($app['sentry.hasher'], $model);
 		});

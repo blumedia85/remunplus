@@ -3,51 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/composer/autoload_classmap.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/composer.json</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/routes.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/controllers/UserController.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Models/Group.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Groups/Eloquent/Group.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/controllers/CompanyController.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/composers/menu.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Eloquent/User.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Models/Permission.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Validators/CompanyValidator.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/company/list.blade.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/company/clients-table.blade.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/company/edit.blade.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/config/messages.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/user/edit.blade.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/app/config/packages/mentor/laravel-authentication-acl/menu.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Models/BaseModel.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Kohana/User.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Users/Kohana/Provider.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Exceptions.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/ProviderInterface.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/CompanyInterface.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Kohana/Company.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Kohana/Provider.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Eloquent/Company.php</file>
             <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Eloquent/Provider.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/config/config.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryCompanyRepository.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/UserRepositorySearchFilter.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Validators/UserSignupValidator.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Validators/UserValidator.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/Interfaces/UserRepositoryInterface.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/Interfaces/CompanyRepositoryInterface.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/src/Mentordeveloper/Library/Form/FormInterface.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/src/Mentordeveloper/Library/Form/FormModel.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/SentryServiceProvider.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/AuthenticationServiceProvider.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Models/Company.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryUserRepository.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/src/Mentordeveloper/Library/Repository/EloquentBaseRepository.php</file>
-            <file>file:/E:/New%20folder/htdocs/payroll_erp/app/config/packages/mentor/laravel-authentication-acl/sentry/config.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Sentry.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/controllers/GroupController.php</file>
             <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/config/sentry/config.php</file>
             <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/CompanyRepositorySearchFilter.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/company/edit.blade.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/controllers/CompanyController.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/SentryServiceProvider.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Kohana/Company.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryCompanyRepository.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Models/Company.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/src/Mentordeveloper/Library/LibraryServiceProvider.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Repository/SentryGroupRepository.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/composer/autoload_classmap.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/views/admin/company/clients-table.blade.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/Validators/CompanyValidator.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-library/src/Mentordeveloper/Library/Repository/EloquentBaseRepository.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/routes.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/mentor/laravel-authentication-acl/src/Mentordeveloper/Authentication/AuthenticationServiceProvider.php</file>
+            <file>file:/E:/New%20folder/htdocs/payroll_erp/vendor/cartalyst/sentry/src/Cartalyst/Sentry/Company/Eloquent/Company.php</file>
         </group>
     </open-files>
 </project-private>

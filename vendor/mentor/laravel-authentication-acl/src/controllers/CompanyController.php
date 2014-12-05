@@ -27,7 +27,7 @@ use Mentordeveloper\Authentication\Validators\UserProfileValidator;
 use View, Input, Redirect, App, Config, Controller;
 use Mentordeveloper\Authentication\Interfaces\AuthenticateInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-class CompanyController extends Controller {
+class CompanyController extends \Controller {
 /**
      * @var \Mentordeveloper\Authentication\Repository\SentryUserRepository
      */
@@ -62,8 +62,10 @@ class CompanyController extends Controller {
         $this->custom_profile_repository = App::make('custom_profile_repository');
     }
     public function getList(){
-//        $companies = $this->company_repository->all(Input::except(['page']));
-        $companies = Company::select()->get();
+        
+        $companies = $this->company_repository->all(Input::except(['page']));
+        print_r($companies);exit;
+//        $companies = Company::select()->get();
         return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
     }
@@ -75,11 +77,11 @@ class CompanyController extends Controller {
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
-//            echo $e->getMessage();exit;
+
             $user = new Company;
         }
 //        $presenter = new UserPresenter($user);
-//echo '<pre>';print_r($user);exit;
+
         return View::make('laravel-authentication-acl::admin.company.edit')->with(["user" => $user]);
     }
     public function postEditCompany()
@@ -107,9 +109,9 @@ class CompanyController extends Controller {
             DbHelper::rollback();
             $c_errors = $this->c_f->getErrors();
             $errors = $this->f->getErrors();
-//            print_r($c_errors);
+            print_r($c_errors);
 //            print_r($errors);
-//            exit;
+            exit;
             // passing the id incase fails editing an already existing item
             return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($c_errors);
         }

@@ -38,8 +38,9 @@ class CompanyRepositorySearchFilter
         $q = $this->applyOrderingFilter($input_filter, $q);
 
         $q = $this->createAllSelect($q);
-
+print_r($q);exit;
         $users = $q->get();
+        echo 'all';exit;
 
         $user_emails = array_flip(array_map((function ($element)
         {
