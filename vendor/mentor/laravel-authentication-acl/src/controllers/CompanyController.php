@@ -91,10 +91,10 @@ class CompanyController extends \Controller {
         try
         {
             $company = $this->c_f->process(Input::all());
-//            print_r($company);
-//            echo 'company';
-//            echo $company->id;
-//            exit;
+            print_r($company);
+            echo 'company';
+            echo $company->id;
+            exit;
             $data = array();
             $data = Input::all();
             $data['client_id'] = $company->id;
