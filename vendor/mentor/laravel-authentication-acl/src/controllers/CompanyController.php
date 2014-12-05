@@ -64,7 +64,7 @@ class CompanyController extends \Controller {
     public function getList(){
         
         $companies = $this->company_repository->all(Input::except(['page']));
-        print_r($companies);exit;
+//        print_r($companies);exit;
 //        $companies = Company::select()->get();
         return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
