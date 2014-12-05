@@ -8,7 +8,7 @@
 use App;
 use DB;
 use Mentordeveloper\Library\Traits\ConnectionTrait;
-
+use Mentordeveloper\Authentication\Interfaces\AuthenticateInterface;
 class UserRepositorySearchFilter
 {
     public static $multiple_ordering_separator = ",";
@@ -20,7 +20,7 @@ class UserRepositorySearchFilter
     private $groups_table_name = "groups";
     private $profile_table_name = "user_profile";
     private $valid_ordering_fields = ["first_name", "last_name", "email", "last_login", "activated", "name"];
-
+    protected $authenticator;
     public function __construct($per_page = 5)
     {
         $this->per_page = $per_page;
@@ -76,6 +76,12 @@ class UserRepositorySearchFilter
      */
     private function applySearchFilters(array $input_filter = null, $q)
     {
+        $this->authenticator = App::make('authenticator');
+        $logged_user = $this->authenticator->getLoggedUser();
+        $client_id = $logged_user->client_id;
+        $q = $q->where($this->user_table_name . '.is_hidden', '=', 1);
+        $q = $q->where($this->user_table_name . '.client_id', '=', $client_id);
+
         if($this->isSettedInputFilter($input_filter))
         {
             foreach($input_filter as $column => $value)
@@ -107,11 +113,6 @@ class UserRepositorySearchFilter
                             break;
                         case 'group_id':
                             $q = $q->where($this->groups_table_name . '.id', '=', $value);
-                        default:
-                            $logged_user = $this->auth->getLoggedUser();
-                            $client_id = $logged_user->client_id;
-                             $q = $q->where($this->user_table_name . '.is_hidden', '=', 1);
-                             $q = $q->where($this->user_table_name . '.client_id', '=', $client_id);
                             break;
                     }
                 }
