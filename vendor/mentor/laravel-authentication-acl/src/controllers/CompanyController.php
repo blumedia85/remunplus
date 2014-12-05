@@ -109,9 +109,9 @@ class CompanyController extends \Controller {
             DbHelper::rollback();
             $c_errors = $this->c_f->getErrors();
             $errors = $this->f->getErrors();
-            print_r($c_errors);
-//            print_r($errors);
-            exit;
+//            print_r($c_errors);
+////            print_r($errors);
+//            exit;
             // passing the id incase fails editing an already existing item
             return Redirect::route("client.edit", $id ? ["id" => $id] : [])->withInput()->withErrors($c_errors);
         }
