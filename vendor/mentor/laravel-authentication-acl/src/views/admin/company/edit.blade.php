@@ -92,13 +92,13 @@ Admin area: edit client
                     <!-- Start Date text field -->
                     <div class="form-group">
                         {{Form::label('start_date','Start Date: *')}}
-                        {{Form::text ('start_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription Start Date', 'autocomplete' => 'off'])}}
+                        {{Form::text ('start_date', (isset($user->sub_start_date)) ? $user->sub_start_date : null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription Start Date', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('start_date')}}</span>
                     <!-- End Date text field -->
                     <div class="form-group">
                         {{Form::label('end_date','End Date: *')}}
-                        {{Form::text ('end_date', null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription End Date', 'autocomplete' => 'off'])}}
+                        {{Form::text ('end_date', (isset($user->sub_end_date)) ? $user->sub_end_date : null, ['class' => 'form-control datepicker', 'placeholder' => 'Subscription End Date', 'autocomplete' => 'off'])}}
                     </div>
                     <span class="text-danger">{{$errors->first('end_date')}}</span>
                     
