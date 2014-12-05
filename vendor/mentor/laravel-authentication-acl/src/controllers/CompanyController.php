@@ -104,7 +104,7 @@ class CompanyController extends \Controller {
             $this->profile_repository->attachEmptyProfile($user);
             
             $data['email'] = $company->company_name.'_admin@blumemedia.com';
-            $user = $this->f->process($data_admin);
+            $user = $this->f->process($data);
             $this->profile_repository->attachEmptyProfile($user);
             
         } catch(MentordeveloperExceptionsInterface $e)
