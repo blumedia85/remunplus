@@ -199,8 +199,8 @@ class CompanyRepositorySearchFilter
     private function createAllSelect($q)
     {
         $q = $q->select(
-               $this->client_table_name . '.*',
                $this->user_table_name . '.*',
+               $this->client_table_name . '.*',
                $this->client_table_name . '.id as cl_id',
                $this->client_table_name . '.username as email',
                $this->user_table_name . '.email as u_email',

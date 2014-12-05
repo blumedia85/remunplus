@@ -44,8 +44,8 @@
                               <td class="hidden-xs">{{$user->last_login ? $user->last_login : 'not logged yet.'}}</td>
                               <td>
                                   @if(! $user->protected)
-                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany', ['id' => $user->id])}}"><i class="fa fa-pencil-square-o fa-2x"></i></a>
-                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->id, '_token' => csrf_token()])}}" class="margin-left-5 delete"><i class="fa fa-trash-o fa-2x"></i></a>
+                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany', ['id' => $user->cl_id])}}"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                                      <a href="{{URL::action('Mentordeveloper\Authentication\Controllers\CompanyController@deleteCompany',['id' => $user->cl_id, '_token' => csrf_token()])}}" class="margin-left-5 delete"><i class="fa fa-trash-o fa-2x"></i></a>
                                   @else
                                       <i class="fa fa-times fa-2x light-blue"></i>
                                       <i class="fa fa-times fa-2x margin-left-12 light-blue"></i>
