@@ -80,9 +80,13 @@ class UserRepositorySearchFilter
         $logged_user = $this->authenticator->getLoggedUser();
         $client_id = $logged_user->client_id;
         $is_hidden = $logged_user->is_hidden;
+        $is_admin = $logged_user->is_admin;
         if(!empty($client_id))
             $q = $q->where($this->user_table_name . '.client_id', '=', $client_id);
-        $q = $q->where($this->user_table_name . '.is_hidden', '=', $is_hidden);
+        if($is_admin==1)
+            $q = $q->where($this->user_table_name . '.is_hidden', '=', 1);
+        if($is_hidden==2)
+            $q = $q->where($this->user_table_name . '.is_hidden', '=', 2);
 
         if($this->isSettedInputFilter($input_filter))
         {
