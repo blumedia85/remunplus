@@ -64,7 +64,7 @@ class CompanyController extends \Controller {
     public function getList(){
         
         $companies = $this->company_repository->all(Input::except(['page']));
-//        print_r($companies);exit;
+       echo '<pre>'; print_r($companies);exit;
 //        $companies = Company::select()->get();
         return View::make('laravel-authentication-acl::admin.company.list')->with(["users" => $companies]);
 
@@ -106,6 +106,7 @@ class CompanyController extends \Controller {
             $this->profile_repository->attachEmptyProfile($user);
             
             $data['email'] = $company->company_name.'_admin@blumemedia.com';
+            $data['is_hidden'] = 1;
             $user = $this->f->process($data);
             $this->profile_repository->attachEmptyProfile($user);
             
