@@ -103,12 +103,7 @@ class CompanyController extends \Controller {
             $user = $this->f->process($data);
             $this->profile_repository->attachEmptyProfile($user);
             
-            $data_admin = array();
-            $data_admin = Input::all();
-            $data_admin['client_id'] = $company->id;
-            $data_admin['email'] = $company->company_name.'_admin@blumemedia.com';
-            $data['activated'] = 1;
-            $data['banned'] = 0;
+            $data['email'] = $company->company_name.'_admin@blumemedia.com';
             $user = $this->f->process($data_admin);
             $this->profile_repository->attachEmptyProfile($user);
             
