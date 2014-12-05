@@ -80,7 +80,9 @@ class CompanyController extends \Controller {
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
-            echo $e->getMessage();exit;
+            $user = Company::find(Input::get('id'));
+            print_r($user);
+            echo "Error".$e->getMessage();exit;
             
 
             $user = new Company;
