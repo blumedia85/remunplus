@@ -120,9 +120,9 @@ class CompanyController extends \Controller {
         } catch(MentordeveloperExceptionsInterface $e)
         {
             DbHelper::rollback();
-            echo $e->getMessage();
-            echo $this->c_f->getMessage();
-            exit;
+//            echo $e->getMessage();
+//            echo $this->c_f->getMessage();
+//            exit;
             $c_errors = $this->c_f->getErrors();
             $errors = $this->f->getErrors();
 //            print_r($c_errors);
@@ -135,7 +135,7 @@ class CompanyController extends \Controller {
         DbHelper::commit();
 
         return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@editCompany', ["id" => $company->id])
-                       ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.user_edit_success'));
+                       ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.company_edit_success'));
     }
 
     public function deleteCompany()
@@ -150,7 +150,7 @@ class CompanyController extends \Controller {
             return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@getList')->withErrors($errors);
         }
         return Redirect::action('Mentordeveloper\Authentication\Controllers\CompanyController@getList')
-                       ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.user_delete_success'));
+                       ->withMessage(Config::get('laravel-authentication-acl::messages.flash.success.company_delete_success'));
     }
 
     public function editPermission()

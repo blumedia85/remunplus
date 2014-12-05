@@ -37,6 +37,8 @@ return [
            */
           "success" => [
             // user
+            "company_edit_success" => "Company edited with success.",
+            "company_delete_success" => "Company deleted with success.",
             "user_edit_success" => "User edited with success.",
             "user_delete_success" => "User deleted with success.",
             "user_group_add_success" => "Group added with success.",

@@ -107,6 +107,12 @@ class UserRepositorySearchFilter
                             break;
                         case 'group_id':
                             $q = $q->where($this->groups_table_name . '.id', '=', $value);
+                        default:
+                            $logged_user = $this->auth->getLoggedUser();
+                            $client_id = $logged_user->client_id;
+                             $q = $q->where($this->user_table_name . '.is_hidden', '=', 1);
+                             $q = $q->where($this->user_table_name . '.client_id', '=', $client_id);
+                            break;
                     }
                 }
             }
