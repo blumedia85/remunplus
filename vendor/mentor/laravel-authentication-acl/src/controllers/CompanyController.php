@@ -119,8 +119,10 @@ class CompanyController extends \Controller {
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
-            
             DbHelper::rollback();
+            echo $e->getMessage();
+            echo $this->c_f->getMessage();
+            exit;
             $c_errors = $this->c_f->getErrors();
             $errors = $this->f->getErrors();
 //            print_r($c_errors);
