@@ -72,8 +72,8 @@ class CompanyController extends \Controller {
     public function editCompany(){
         try
         {
-//            $user = $this->company_repository->find(Input::get('id'));
-            $user = Company::find(Input::get('id'));
+            $user = $this->company_repository->find(Input::get('id'));
+//            $user = Company::find(Input::get('id'));
             
         } catch(MentordeveloperExceptionsInterface $e)
         {
