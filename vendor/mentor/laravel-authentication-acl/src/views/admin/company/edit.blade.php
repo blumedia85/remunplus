@@ -33,7 +33,7 @@ Admin area: edit client
                     <!-- email text field -->
                     <div class="form-group">
                         {{Form::label('email','Email: *')}}
-                        {{Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'user email', 'autocomplete' => 'off'])}}
+                        {{Form::text('email', (isset($user->username)) ? $user->username : null,, ['class' => 'form-control', 'placeholder' => 'user email', 'autocomplete' => 'off'])}}
                         <input type="hidden" name="client_id" id="client_id" value="1" />
                     </div>
                     <span class="text-danger">{{$errors->first('email')}}</span>
